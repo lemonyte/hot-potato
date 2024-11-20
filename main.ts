@@ -1,8 +1,11 @@
+enum RadioMessage {
+    message1 = 49434
+}
 radio.onReceivedNumber(function (receivedNumber) {
     potato = receivedNumber
 })
 input.onButtonPressed(Button.AB, function () {
-    potato = randint(10, 20)
+    potato = randint(20, 30)
 })
 input.onGesture(Gesture.Shake, function () {
     if (potato > 0) {
@@ -28,7 +31,7 @@ basic.forever(function () {
         basic.showIcon(IconNames.Skull)
         radio.sendNumber(-2)
         music.play(music.stringPlayable("C5 F C5 F C5 F - - ", 500), music.PlaybackMode.UntilDone)
-        potato = -1
+        potato = -3
     }
     if (potato == -1) {
         basic.clearScreen()
